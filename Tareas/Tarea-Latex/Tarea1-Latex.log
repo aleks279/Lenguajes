@@ -1,0 +1,65 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=latex 2016.7.29)  30 JUL 2016 16:49
+entering extended mode
+**./Tarea1-Latex.tex
+(Tarea1-Latex.tex
+LaTeX2e <2016/03/31> patch level 1
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (Tarea1-Latex.aux)
+\openout1 = `Tarea1-Latex.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 7.
+
+
+LaTeX Warning: Empty `thebibliography' environment on input line 17.
+
+
+Overfull \hbox (15.82877pt too wide) in paragraph at lines 15--17
+[]\OT1/cmr/m/n/10.95 - TeXnic-Cen-ter, About La-Tex `http://www.texniccenter.org/about/about-
+ []
+
+[1
+
+] (Tarea1-Latex.aux) ) 
+Here is how much of TeX's memory you used:
+ 229 strings out of 493336
+ 2470 string characters out of 3136709
+ 54222 words of memory out of 3000000
+ 3835 multiletter control sequences out of 15000+200000
+ 7887 words of font info for 28 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 21i,6n,19p,153b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Tarea1-Latex.dvi (1 page, 824 bytes).
