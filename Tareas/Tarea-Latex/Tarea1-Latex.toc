@@ -1,0 +1,6 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Datos historicos}{1}
+\contentsline {section}{\numberline {2}Importancia y usos academicos}{2}
+\contentsline {section}{\numberline {3}Estilos importantes}{2}
+\contentsline {section}{\numberline {4}Uso}{2}
+\contentsline {subsection}{\numberline {4.1}Estructuras basicas}{2}

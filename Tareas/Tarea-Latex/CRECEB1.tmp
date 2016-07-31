@@ -1,23 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage{listings}
-\usepackage{xcolor}
 \usepackage{graphicx}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{Tarea 1 - \LaTeX{}}
-\rfoot{Page \thepage}
 \graphicspath{ {images/} }
-\lstset
-{
-    language=[LaTeX]TeX,
-    breaklines=true,
-    basicstyle=\tt\scriptsize,
-    keywordstyle=\color{blue},
-    identifierstyle=\color{magenta},
-}
 
 \title{\textbf{Tarea 1 - \LaTeX{}}}
 \author{Saul Zamora Castro\\200835773\\}
@@ -46,11 +30,9 @@ Los documentos generados por \LaTeX{} son de muy alta calidad, especialmente cua
 
 
 \section{Uso}
+En esta seccion se presentan ejemplos de uso de algunas de las funcionalidades de \LaTeX{}.
 
-\subsection{Estructuras basicas}
-
-El siguiente codigo ejemplifica la creacion de titulos de documentos, autores, tablas de contenidos, secciones, parrafos y formulas matematicas.
-
+\lstset{language=LaTeX}
 \begin{lstlisting}
 \documentclass{article}
 
@@ -66,56 +48,21 @@ El siguiente codigo ejemplifica la creacion de titulos de documentos, autores, t
 
 	This is my first section!
 
-	LaTeX is great in setting formulas 
-	\\like in example $c = \sqrt{a^2 + b^2}$
+	LaTeX is great in setting formulas like in example $c = \sqrt{a^2 + b^2}$
 
 	\section{My second Section}
 
-	Even referencing other sections is very easy.
-	\\See section~\ref{firstSection}.
+	Even referencing other sections is very easy. See section~\ref{firstSection}.
 \end{document}
 \end{lstlisting}
 
-Lo cual genera un documento como el de la siguiente figura.
+Con el anterior snippet de codigo se genera el siguiente documento:
 
 \includegraphics[width=0.9\textwidth]{ejemplo1.png}
 
-Para insertar imagenes se usa el siguiente codigo:
-
-\begin{lstlisting}
-\includegraphics[width=0.9\textwidth]{ejemplo1.png}
-\end{lstlisting}
-
-Este codigo particular fue el utilizado para insertar la imagen anterior.
-
-Para agregar subtitulos para una seccion, se agregan `subsecciones' de la siguiente forma:
-
-\begin{lstlisting}
-\subsection{Estructuras basicas}
-\end{lstlisting}
-
-El codigo anterior es el utilizado para generar el subtitulo de la seccion 4.1 de este reporte.
-
-Para generar encabezados y pies de pagina como los de este documento se utilizan las sigioentes librerias:
-
-\begin{lstlisting}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{fancyhdr}
-\end{lstlisting}
-
-Y para el contenido se usa el siguiente codigo:
-
-\begin{lstlisting}
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{Tarea 1 - \LaTeX{}}
-\rfoot{Page \thepage}
-\end{lstlisting}
 
 \begin{thebibliography}{99}
-- TeXnicCenter, About \LaTeX{} \\http://www.texniccenter.org/about/about-LaTeX
-\\- \LaTeX{}, Wikipedia \\https://es.wikipedia.org/wiki/LaTeX
-\\- ShareLaTeX Documentation \\https://es.sharelatex.com/learn
+- TeXnicCenter, About \LaTeX{} - `http://www.texniccenter.org/about/about-\LaTeX{}'
+\\- \LaTeX{}, Wikipedia - `https://es.wikipedia.org/wiki/\LaTeX{}'
 \end{thebibliography}
 \end{document}
