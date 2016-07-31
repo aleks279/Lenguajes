@@ -5,6 +5,8 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
+\usepackage[firstpage=true]{background}
+
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Tarea 1 - \LaTeX{}}
@@ -17,6 +19,13 @@
     basicstyle=\tt\scriptsize,
     keywordstyle=\color{blue},
     identifierstyle=\color{magenta},
+}
+\backgroundsetup{
+contents={\includegraphics{latex.png}},
+angle=0,
+scale=0.5,
+color=black,
+opacity=0.2
 }
 
 \title{\textbf{Tarea 1 - \LaTeX{}}}
@@ -113,9 +122,34 @@ Y para el contenido se usa el siguiente codigo:
 \rfoot{Page \thepage}
 \end{lstlisting}
 
+La marca de agua en la primera pagina fue generada con el siguiente snippet:
+
+\begin{lstlisting}
+\backgroundsetup{
+contents={\includegraphics{latex.png}},
+angle=0,
+scale=0.5,
+color=black,
+opacity=0.2
+}
+\end{lstlisting}
+
+Para agregar efectos al texto, tales como color o cursiva, se usa un snippet similar al siguiente:
+
+\begin{lstlisting}
+\emph{some black text, \color{red} followed by a red fragment}, going black again.
+\end{lstlisting}
+
+Lo cual genera un texto asi:\\
+\emph{some black text, \color{red} followed by a red fragment}, going black again.
+
+
+
+
 \begin{thebibliography}{99}
 - TeXnicCenter, About \LaTeX{} \\http://www.texniccenter.org/about/about-LaTeX
 \\- \LaTeX{}, Wikipedia \\https://es.wikipedia.org/wiki/LaTeX
 \\- ShareLaTeX Documentation \\https://es.sharelatex.com/learn
+\\- LaTeX/Colors \\https://en.wikibooks.org/wiki/LaTeX/Colors
 \end{thebibliography}
 \end{document}
