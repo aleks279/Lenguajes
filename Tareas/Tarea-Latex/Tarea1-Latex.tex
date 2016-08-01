@@ -6,6 +6,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 \usepackage[firstpage=true]{background}
+\usepackage{multicol}
+\usepackage{tikz}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -29,11 +31,17 @@ opacity=0.2
 }
 
 \title{\textbf{Tarea 1 - \LaTeX{}}}
-\author{Saul Zamora Castro\\200835773\\}
+\author{Carlos Ariel Herrera\\Jorge Sibaja Sandi\\Saul Zamora Castro}
 \date{}
 \begin{document}
+
 \maketitle
+
+\newpage
+
 \tableofcontents
+
+\newpage
 
 \section{Datos historicos}
 \LaTeX{} es un sistema de composicion de texto, orientado a la creacion de documentos que presentan una alta calidad tipografica. Dadas sus caracteristicas y posibilidades, es usado particularmente en la generacion de articulos y libros cientificos que incluyen entre otas cosas, expresiones matematicas.
@@ -51,12 +59,9 @@ La facilidad que presenta \LaTeX{} para insertar imagenes y graficas son la nece
 
 Los documentos generados por \LaTeX{} son de muy alta calidad, especialmente cuando hay formulas matematicas involucradas. Otro factor que hace ventajoso a \LaTeX{} sobre otros procesadores de texto, es que no depende de ninguna plataforma para funcionar; asi como puede ser usado en Windows, puede ser utilizado en Linux o Mac OS.
 
-\section{Estilos importantes}
+\section{Uso de estructuras}
 
-
-\section{Uso}
-
-\subsection{Estructuras basicas}
+\subsection{Lo basico}
 
 El siguiente codigo ejemplifica la creacion de titulos de documentos, autores, tablas de contenidos, secciones, parrafos y formulas matematicas.
 
@@ -89,14 +94,17 @@ Lo cual genera un documento como el de la siguiente figura.
 
 \includegraphics[width=0.9\textwidth]{ejemplo1.png}
 
-Para insertar imagenes se usa el siguiente codigo:
+\subsection{Como agregar efectos al texto}
+Para agregar efectos al texto, tales como color o cursiva, se usa un snippet similar al siguiente:
 
 \begin{lstlisting}
-\includegraphics[width=0.9\textwidth]{ejemplo1.png}
+\emph{some black text, \color{red} followed by a red fragment}, going black again.
 \end{lstlisting}
 
-Este codigo particular fue el utilizado para insertar la imagen anterior.
+Lo cual genera un texto asi:\\
+\emph{some black text, \color{red} followed by a red fragment}, going black again.
 
+\subsection{Como agregar subtitulos}
 Para agregar subtitulos para una seccion, se agregan `subsecciones' de la siguiente forma:
 
 \begin{lstlisting}
@@ -105,6 +113,38 @@ Para agregar subtitulos para una seccion, se agregan `subsecciones' de la siguie
 
 El codigo anterior es el utilizado para generar el subtitulo de la seccion 4.1 de este reporte.
 
+\subsection{Como agregar referencias}
+El codigo a continuacion es el necesario para agregar referencias bibliograficas:
+
+\begin{lstlisting}
+\begin{thebibliography}{9}
+
+\bibitem{lamport94}
+  Leslie Lamport,
+  \emph{\LaTeX: a document preparation system},
+  Addison Wesley, Massachusetts,
+  2nd edition,
+  1994.
+
+\end{thebibliography}
+\end{lstlisting}
+
+El codigo anterior genera referencias similares a las de este documento.
+
+\subsection{Como agregar marcas de agua}
+La marca de agua en la primera pagina fue generada con el siguiente snippet:
+
+\begin{lstlisting}
+\backgroundsetup{
+contents={\includegraphics{latex.png}},
+angle=0,
+scale=0.5,
+color=black,
+opacity=0.2
+}
+\end{lstlisting}
+
+\subsection{Como agregar encabezados y pies de pagina}
 Para generar encabezados y pies de pagina como los de este documento se utilizan las sigioentes librerias:
 
 \begin{lstlisting}
@@ -122,34 +162,117 @@ Y para el contenido se usa el siguiente codigo:
 \rfoot{Page \thepage}
 \end{lstlisting}
 
-La marca de agua en la primera pagina fue generada con el siguiente snippet:
+\subsection{Como agregar columnas}
+El siguiente codigo es un ejemplo de como crear un documento con columnas:
 
 \begin{lstlisting}
-\backgroundsetup{
-contents={\includegraphics{latex.png}},
-angle=0,
-scale=0.5,
-color=black,
-opacity=0.2
+\usepackage{multicol}
+ 
+\begin{document}
+\begin{multicols}{3}
+[
+\section{First Section}
+All human things are subject to decay. And when fate summons, Monarchs must obey.
+]
+Hello, here is some text without a meaning.  This text should show what 
+a printed text will look like at this place.
+If you read this text, you will get no information.  Really?  Is there 
+no information?  Is there...
+\end{multicols}
+\end{lstlisting}
+
+El codigo anterior genera un texto de la siguiente forma:
+
+\includegraphics[width=0.9\textwidth]{ejemplo2.png}
+
+\section{Como crear tablas}
+
+Para crear tablas, se usa un codigo como el siguiente:
+
+\begin{lstlisting}
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{lllll}
+ 1 2 3 4 5  \\
+ a b c d e  \\
+ 6 7 8 9 0  \\
+ f g h i j 
+\end{tabular}
+\end{table}
+\end{lstlisting}
+
+El cual genera una tabla como la siguiente:
+
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{lllll}
+ 1 2 3 4 5  \\
+ a b c d e  \\
+ 6 7 8 9 0  \\
+ f g h i j 
+\end{tabular}
+\end{table}
+
+\section{Como crear graficos}
+
+Las posibilidades al crear graficos en LaTeX son muchas, el siguiente es un ejemplo simple de como generar un grafico circular:
+
+\begin{lstlisting}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+
+\def \n {5}
+\def \radius {3cm}
+\def \margin {8} % margin in angles, depends on the radius
+
+\foreach \s in {1,...,\n}
+{
+  \node[draw, circle] at ({360/\n * (\s - 1)}:\radius) {$\s$};
+  \draw[->, >=latex] ({360/\n * (\s - 1)+\margin}:\radius) 
+    arc ({360/\n * (\s - 1)+\margin}:{360/\n * (\s)-\margin}:\radius);
 }
+\end{tikzpicture}
+\end{document}
 \end{lstlisting}
 
-Para agregar efectos al texto, tales como color o cursiva, se usa un snippet similar al siguiente:
+El cual genera un grafico como el siguiente:
+
+
+\begin{tikzpicture}
+
+\def \n {5}
+\def \radius {3cm}
+\def \margin {8} % margin in angles, depends on the radius
+
+\foreach \s in {1,...,\n}
+{
+  \node[draw, circle] at ({360/\n * (\s - 1)}:\radius) {$\s$};
+  \draw[->, >=latex] ({360/\n * (\s - 1)+\margin}:\radius) 
+    arc ({360/\n * (\s - 1)+\margin}:{360/\n * (\s)-\margin}:\radius);
+}
+\end{tikzpicture}
+
+
+\section{Como agregar imagenes}
+Para insertar imagenes se usa el siguiente codigo:
 
 \begin{lstlisting}
-\emph{some black text, \color{red} followed by a red fragment}, going black again.
+\includegraphics[width=0.9\textwidth]{ejemplo1.png}
 \end{lstlisting}
 
-Lo cual genera un texto asi:\\
-\emph{some black text, \color{red} followed by a red fragment}, going black again.
+Este codigo particular fue el utilizado para insertar la imagen en la seccion 4.1.
 
-
-
+\newpage
 
 \begin{thebibliography}{99}
-- TeXnicCenter, About \LaTeX{} \\http://www.texniccenter.org/about/about-LaTeX
-\\- \LaTeX{}, Wikipedia \\https://es.wikipedia.org/wiki/LaTeX
-\\- ShareLaTeX Documentation \\https://es.sharelatex.com/learn
-\\- LaTeX/Colors \\https://en.wikibooks.org/wiki/LaTeX/Colors
+\bibitem{TeXnicCenter} TeXnicCenter, \emph{About \LaTeX{}}, http://www.texniccenter.org/about/about-LaTeX
+\bibitem{LaTeX} \LaTeX{}, Wikipedia, https://es.wikipedia.org/wiki/LaTeX
+\bibitem{ShareLaTeX} ShareLaTeX Documentation, https://es.sharelatex.com/learn
+\bibitem{LaTeX/Colors} \LaTeX{}/Colors, https://en.wikibooks.org/wiki/LaTeX/Colors
 \end{thebibliography}
 \end{document}

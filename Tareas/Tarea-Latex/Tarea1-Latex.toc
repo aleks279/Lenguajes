@@ -1,6 +1,14 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Datos historicos}{1}
-\contentsline {section}{\numberline {2}Importancia y usos academicos}{2}
-\contentsline {section}{\numberline {3}Estilos importantes}{2}
-\contentsline {section}{\numberline {4}Uso}{2}
-\contentsline {subsection}{\numberline {4.1}Estructuras basicas}{2}
+\contentsline {section}{\numberline {1}Datos historicos}{3}
+\contentsline {section}{\numberline {2}Importancia y usos academicos}{3}
+\contentsline {section}{\numberline {3}Uso de estructuras}{4}
+\contentsline {subsection}{\numberline {3.1}Lo basico}{4}
+\contentsline {subsection}{\numberline {3.2}Como agregar efectos al texto}{5}
+\contentsline {subsection}{\numberline {3.3}Como agregar subtitulos}{5}
+\contentsline {subsection}{\numberline {3.4}Como agregar referencias}{6}
+\contentsline {subsection}{\numberline {3.5}Como agregar marcas de agua}{6}
+\contentsline {subsection}{\numberline {3.6}Como agregar encabezados y pies de pagina}{6}
+\contentsline {subsection}{\numberline {3.7}Como agregar columnas}{6}
+\contentsline {section}{\numberline {4}Como crear tablas}{7}
+\contentsline {section}{\numberline {5}Como crear graficos}{8}
+\contentsline {section}{\numberline {6}Como agregar imagenes}{9}
