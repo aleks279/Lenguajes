@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.30)  31 JUL 2016 19:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.30)  9 AUG 2016 11:48
 entering extended mode
 **./Tarea1-Latex.tex
 (Tarea1-Latex.tex
@@ -792,6 +792,29 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \colbreak@box=\box66
 \mc@col@check@num=\count125
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen165
+\captionmargin@=\dimen166
+\captionwidth=\dimen167
+\caption@tempdima=\dimen168
+\caption@indent=\dimen169
+\caption@parindent=\dimen170
+\caption@hangindent=\dimen171
+)
+\c@ContinuedFloat=\count126
+Package caption Info: listings package is loaded.
+)
+\c@subfigure=\count127
+\c@subtable=\count128
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -825,32 +848,32 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 (Tarea1-Latex.aux)
 \openout1 = `Tarea1-Latex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-\c@lstlisting=\count126
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+\c@lstlisting=\count129
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
-\scratchdimen=\dimen165
+\scratchcounter=\count130
+\scratchdimen=\dimen172
 \scratchbox=\box67
-\nofMPsegments=\count128
-\nofMParguments=\count129
+\nofMPsegments=\count131
+\nofMParguments=\count132
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count130
-\MPscratchDim=\dimen166
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen173
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
 \everyMPtoPDFconversion=\toks34
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -898,26 +921,28 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 ABD: EveryShipout initializing macros
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 38.
+(Font)              <17.28> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 38.
+(Font)              <12> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 38.
+(Font)              <8> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 38.
+(Font)              <6> on input line 39.
 
 <images/latex.png, id=4, 120.45pt x 79.497pt>
 File: images/latex.png Graphic file (type png)
  <use images/latex.png>
-Package pdftex.def Info: images/latex.png used on input line 40.
+Package pdftex.def Info: images/latex.png used on input line 41.
 (pdftex.def)             Requested size: 120.44969pt x 79.4968pt.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/latex.png>]
 (Tarea1-Latex.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 6.
+(Font)              <10.95> on input line 5.
 )
 \tf@toc=\write4
 \openout4 = `Tarea1-Latex.toc'.
@@ -933,51 +958,64 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: images/ejemplo1.png Graphic file (type png)
 
 <use images/ejemplo1.png>
-Package pdftex.def Info: images/ejemplo1.png used on input line 95.
+Package pdftex.def Info: images/ejemplo1.png used on input line 96.
 (pdftex.def)             Requested size: 323.9978pt x 268.40668pt.
  [4] [5 <./images/ejemplo1.png>] [6]
 <images/ejemplo2.png, id=34, 653.44125pt x 510.90875pt>
 File: images/ejemplo2.png Graphic file (type png)
 
 <use images/ejemplo2.png>
-Package pdftex.def Info: images/ejemplo2.png used on input line 186.
+Package pdftex.def Info: images/ejemplo2.png used on input line 187.
 (pdftex.def)             Requested size: 323.9978pt x 253.32549pt.
  [7 <./images/ejemplo2.png (PNG copy)>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 208.
+               Default added (so using `tbp') on input line 209.
 
-[8] [9]
-Overfull \hbox (5.09349pt too wide) in paragraph at lines 273--274
+[8] [9] <images/lion.jpg, id=46, 1606.0pt x 903.375pt>
+File: images/lion.jpg Graphic file (type jpg)
+ <use images/lion.jpg>
+Package pdftex.def Info: images/lion.jpg used on input line 302.
+(pdftex.def)             Requested size: 161.98172pt x 142.25475pt.
+
+<images/tiger.jpg, id=47, 3854.4pt x 2168.1pt>
+File: images/tiger.jpg Graphic file (type jpg)
+ <use images/tiger.jpg>
+Package pdftex.def Info: images/tiger.jpg used on input line 307.
+(pdftex.def)             Requested size: 161.97191pt x 142.25475pt.
+
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 301--311
+[]$[]$ $[]$ 
+ []
+
+[10 <./images/lion.jpg> <./images/tiger.jpg>]
+Overfull \hbox (5.09349pt too wide) in paragraph at lines 318--319
 []\OT1/cmr/m/n/10.95 TeXnicCenter, \OT1/cmr/m/it/10.95 About L[]T[]X\OT1/cmr/m/
 n/10.95 , http://www.texniccenter.org/about/about-
  []
 
-[10] (Tarea1-Latex.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[11] (Tarea1-Latex.aux) ) 
 Here is how much of TeX's memory you used:
- 15857 strings out of 493335
- 294807 string characters out of 3136683
- 418598 words of memory out of 3000000
- 19084 multiletter control sequences out of 15000+200000
+ 17002 strings out of 493335
+ 315438 string characters out of 3136683
+ 439757 words of memory out of 3000000
+ 20217 multiletter control sequences out of 15000+200000
  10935 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,122p,657b,2212s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on Tarea1-Latex.pdf (10 pages, 247148 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmitt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pf
+b>
+Output written on Tarea1-Latex.pdf (11 pages, 3594686 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

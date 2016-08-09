@@ -12,3 +12,4 @@
 \contentsline {section}{\numberline {4}Como crear tablas}{7}
 \contentsline {section}{\numberline {5}Como crear graficos}{8}
 \contentsline {section}{\numberline {6}Como agregar imagenes}{9}
+\contentsline {section}{\numberline {7}Como agregar minipages}{9}

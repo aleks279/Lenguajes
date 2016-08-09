@@ -8,6 +8,7 @@
 \usepackage[firstpage=true]{background}
 \usepackage{multicol}
 \usepackage{tikz}
+\usepackage{subcaption}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -31,7 +32,7 @@ opacity=0.2
 }
 
 \title{\textbf{Tarea 1 - \LaTeX{}}}
-\author{Carlos Ariel Herrera\\Jorge Sibaja Sandi\\Saul Zamora Castro}
+\author{Ariel Herrera Fernandez\\Jorge Sibaja Sandi\\Saul Zamora Castro}
 \date{}
 \begin{document}
 
@@ -267,6 +268,50 @@ Para insertar imagenes se usa el siguiente codigo:
 
 Este codigo particular fue el utilizado para insertar la imagen en la seccion 4.1.
 
+\section{Como agregar minipages}
+Para insertar figuras al lado de figuras, tambien conocidas como \emph{minipages}, se utiliza un codigo similar a esto:
+
+\begin{lstlisting}
+\begin{figure}[h]
+ 
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth, height=5cm]{lion-logo} 
+\caption{Caption1}
+\label{fig:subim1}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth, height=5cm]{mesh}
+\caption{Caption 2}
+\label{fig:subim2}
+\end{subfigure}
+ 
+\caption{Caption for this figure with two images}
+\label{fig:image2}
+\end{figure}
+\end{lstlisting}
+
+Para utilizar el ambiente \emph{subfigure}, es necesario incluir el siguiente paquete:
+
+\begin{lstlisting}
+\usepackage{subcaption}
+\end{lstlisting}
+
+\begin{figure}[h]
+ 
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth, height=5cm]{lion} 
+\caption{This is a Lion}
+\label{fig:subim1}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth, height=5cm]{tiger}
+\caption{This is a Tiger}
+\label{fig:subim2}
+\end{subfigure}
+ 
+\caption{Ejemplo de dos imagenes lado a lado}
+\label{fig:image2}
+\end{figure}
 \newpage
 
 \begin{thebibliography}{99}
