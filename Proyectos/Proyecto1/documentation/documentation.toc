@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {I}Introducci\'on}{1}
+\contentsline {section}{\numberline {II}An\'alisis del problema}{2}
+\contentsline {section}{\numberline {III}Dise\~no de la soluci\'on}{2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}M\'ascara de la cancha}{2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}M\'ascara de los jugadores}{2}
+\contentsline {section}{\numberline {IV}Pruebas}{3}
+\contentsline {section}{\numberline {V}Conclusiones}{3}
+\contentsline {section}{\numberline {VI}Referencias}{4}
+\contentsline {section}{References}{4}
