@@ -1,7 +1,11 @@
+##Proyecto 1
+##Preparado por:
+## Ariel Herrera
+## Saul Zamora
 ## Funcioón que procesa el video y genera imagenes de los frames procesados.
 function videoProcessing(pVideoPath)
   info = aviinfo(pVideoPath);
-  for i = 1:155
+  for i = 1:info.NumFrames
     frame = frameProcessing(pVideoPath,i);
     cancha = detectarCancha(frame);
     candidatosJugadores = detectarJugadores(frame);
@@ -11,7 +15,6 @@ function videoProcessing(pVideoPath)
     imwrite(resultado, inputImagePath);
   endfor
   ##genera mascara final
-  return;
 endfunction
 ##Detecta los jugadores
 function resultado = detectarJugadores(pFrame)
