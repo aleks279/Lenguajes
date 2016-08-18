@@ -6,17 +6,25 @@
 
 ## Usage:
 ### Functions:
-1. videoProcessing(pVideoPath) 
-..- [Inputs: pVideoPath is a string, the hard drive path of video]
-..- [Outputs: The images with the mask, as a result of the process]
+1. videoProcessing(pVideoPath)
+```
+[Inputs: pVideoPath is a string, the hard drive path of video]
+[Outputs: The images with the mask, as a result of the process]
+```
 2. detectarJugadores(pFrame)
-..- [Inputs: pFrame is the frame of the video, a matrix in hsv format]
-..- [Outputs: A image matrix of the mask for detection of players]
+```
+[Inputs: pFrame is the frame of the video, a matrix in hsv format]
+[Outputs: A image matrix of the mask for detection of players]
+```
 3. detectarCancha(pFrame)
-..- [Inputs: pFrame is the frame of the video, a matrix in hsv format]
-..- [Outputs: A image matrix of the mask for detection of play field]
+```
+[Inputs: pFrame is the frame of the video, a matrix in hsv format]
+[Outputs: A image matrix of the mask for detection of play field]
+```
 4. frameProcessing(pVideoPath, pFrame)
-..- [Inputs: pVideoPath is a string, the hard drive path of video, pFrame is the frame number]
-..- [Outputs: A matrix of the frame, convert to hsv format]
+```
+[Inputs: pVideoPath is a string, the hard drive path of video, pFrame is the frame number]
+[Outputs: A matrix of the frame, convert to hsv format]
+```
 
 Known Issues: You must create a folder named "Outputs" to generate the inputs of videoProcessing function.
