@@ -27,4 +27,4 @@
 [Outputs: A matrix of the frame, convert to hsv format]
 ```
 
-Known Issues: You must create a folder named "Outputs" to generate the inputs of videoProcessing function.
+Known Issues: You must create a folder named "Outputs" to generate the outputs of videoProcessing function.
