@@ -1,6 +1,7 @@
 \documentclass{IEEEtran}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\usepackage{listings}
 
 \graphicspath{ {images/} }
 \pagestyle{fancy}
@@ -77,6 +78,10 @@ Para obtener los jugadores, lo que se hace es:
 \item Se calcula la varianza local usando como entrada la imagen de cromaticidad \emph{H}
 \item Para calcular el umbral \'optimo para la imagen, se utiliz\'o la funcion \emph{graythresh} del lenguaje Octave, la cual por defecto usa el algoritmo de \emph{Otsu}.
 \end{enumerate}
+
+\subsection{Pseudoc\'odigo}
+
+\lstinputlisting[language=Octave, basicstyle=\tiny]{Pseudo.txt}
 
 \section{Pruebas}
 
