@@ -1,0 +1,150 @@
+\documentclass{IEEEtran}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\lstset
+{
+    language=Pascal,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
+
+\graphicspath{ {images/} }
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Tarea 2 - Pascal}
+\rfoot{P\'agina \thepage}
+
+\begin{document}
+\begin{titlepage}
+  \centering
+  {\scshape\LARGE Instituto Tecnol\'ogico de Costa Rica \par}
+  \vspace{1cm}
+  {\scshape\Large Tarea 2 - Pascal\par}
+  \vspace{1.5cm}
+  {\Large\itshape Ariel Herrera\par}
+  {\Large\itshape Sa\'ul Zamora\par}
+  \vfill
+  profesor\par
+  M. Sc. Sa\'ul Calder\'on Ram\'irez \textsc{}
+
+  \vfill
+
+% Bottom of the page
+  {\large \today\par}
+\end{titlepage}
+
+\section{Datos hist\'oricos}
+El lenguaje de programaci\'on Pascal est\'a nombrado en honor al matem\'atico franc\'es Blaise Pascal y fue desarrollado por Niklaus Wirth. Antes de su trabajo en Pascal, Wirth desarroll\'o \emph{Euler} y \emph{ALGOL W} y luego trabaj\'o en lenguajes similares a pascal como \emph{Modula-2} y \emph{Oberon}.
+
+Pascal fue el lenguaje de alto nivel mayormente utilizado en el desarrollo de \emph{Apple Lisa} y tambi\'en durante los primeros a\~nos de \emph{Macintosh}.
+
+\section{Importancia y usos}
+Inicialmente, Pascal era muy utilizado para la ense\~nanza de la programaci\'on. Generaciones de estudiantes usaron Pascal como un lenguaje introductorio durante la universidad. Variantes de Pascal han sido utilizadas frecuentemente para todo desde proyectos de investigaci\'on orientados a juegos de PC y sistemas embebidos.
+
+Object Pascal es utilizado hoy en d\'ia para el desarrollo de aplicaciones Windows pero tambi\'en tiene la habilidad de compilar el mismo c\'odigo a Mac, iOS y Android. Otra versi\'on multiplataforma llamada \emph{Free Pascal}, junto con el IDE \emph{Lazarus}, es popular entre los usuarios Linux ya que ofrece el tipo de desarrollo de \emph{escribe el c\'odigo una vez y compilalo donde sea}.
+
+\section{Tipos de datos}
+Al igual que en otros lenguajes, un tipo en Pascal define un rango de valores que una variable es capaz de almacenar y tambi\'en define que operaciones pueden ser ejecutadas sobre dicha variable.
+\begin{itemize}
+\item \emph{integer}: n\'umeros enteros
+\item \emph{real}: n\'umeros de punto flotante
+\item \emph{boolean}: valores de falso o verdadero
+\item \emph{char}: un caracter de un set ordenado de caract\'eres
+\item \emph{string}: grupo o hilera de caract\'eres
+\item \emph{subrango de tipos}: se pueden contruir subrangos de cualquier tipo de dato ordinal
+\begin{lstlisting}
+var
+  x : 1..10;
+  y : 'a'..'z';
+\end{lstlisting}
+\item \emph{sets}: en contraste con otros lenguajes de tu tiempo, Pascal soporta tipos de datos set
+\begin{lstlisting}
+var
+  Set1 : set of 1..10;
+  Set2 : set of 'a'..'z';
+\end{lstlisting}
+\item \emph{declaraciones de tipos}: los tipos pueden ser definidos usando otros tipos por medio de declaraciones
+\begin{lstlisting}
+type
+  x = integer;
+  y = x;
+\end{lstlisting}
+O declaraciones m\'as complejas:
+\begin{lstlisting}
+type
+  a = array[1..10] of integer;
+  b = record
+        x : integer;
+        y : char
+      end;
+  c = file of a;
+\end{lstlisting}
+\item \emph{tipo archivo}: como se mostro en el c\'odigo anterior, en Pascal, los archivos son secuencias de componentes
+\item \emph{punteros}: Pascal soporta el uso de punteros
+\begin{lstlisting}
+type
+  pNode = ^Node;
+  Node  = record
+          a : integer;
+          b : char;
+          c : pNode  {extra semicolon not strictly required}
+          end;
+var
+  NodePtr : pNode;
+  IntPtr  : ^integer;
+\end{lstlisting}
+\end{itemize}
+\section{Expresiones}
+Las expresiones en Pascal se dan en asignaciones o pruebas. Las expresiones producen un valor de un cierto tipo. Son construidas con dos componentes: los operadores y los operandos. Usualemente los operadores son binarios; requieren dos operandos. Tambi\'en hay operadores unarios, que requieren un \'unico operando.
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{lll}
+Operador                                                                      & Precedencia & Categor\'ia             \\
+Not, @                                                                        & M\'as alta  & Operadores unarios      \\
+* / div mod and shl shr as \textless\textless \textgreater\textgreater        & Segunda     & M\'ultiples operadores  \\
++ - or xor                                                                    & Tercera     & Operadores de adici\'on \\
+= \textless\textgreater \textless \textgreater \textless= \textgreater= in is & M\'as baja  & Operadores relacionales
+\end{tabular}
+\end{table}
+\section{Almacenamiento}
+\section{Estructuras de control}
+Pascal es un lenguaje estructurado, lo que significa que el control de flujo est\'a estructurado en estatutos est\'andares, usualmente sin el comando \emph{goto}.
+\begin{lstlisting}
+while a <> b do  WriteLn('Waiting');
+
+if a > b then WriteLn('Condition met')   {no semicolon allowed!}
+           else WriteLn('Condition not met');
+
+for i := 1 to 10 do  {no semicolon for single statements allowed!}
+  WriteLn('Iteration: ', i);
+
+repeat
+  a := a + 1
+until a = 10;
+
+case i of
+  0 : Write('zero');
+  1 : Write('one');
+  2 : Write('two');
+  3,4,5,6,7,8,9,10: Write('?')
+end;
+\end{lstlisting}
+\section{Caracter\'isticas principales}
+\section{Caracter\'isticas distintivas}
+\section{Ventajas y desventajas}
+\section{Ejemplo}
+
+\section{Referencias}
+
+\begin{thebibliography}{99}
+
+\bibitem{wiki} Pascal (programming language) (2016). . In \emph{Wikipedia}. Retrieved from \texttt{https://en.wikipedia.org/wiki/Pascal_(programming_language)}
+
+\end{thebibliography}
+
+\end{document}
