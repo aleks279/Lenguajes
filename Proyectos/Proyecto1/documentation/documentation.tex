@@ -1,6 +1,7 @@
 \documentclass{IEEEtran}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\usepackage{verbatim}
 
 \graphicspath{ {images/} }
 \pagestyle{fancy}
@@ -16,7 +17,6 @@
   {\scshape\Large Primer proyecto programado\par}
   \vspace{1.5cm}
   {\Large\itshape Ariel Herrera\par}
-  {\Large\itshape Jorge Sibaja\par}
   {\Large\itshape Sa\'ul Zamora\par}
   \vfill
   profesor\par
@@ -44,6 +44,45 @@ Actualmente la Universidad de Costa Rica desarrolla un sistema de an\'alisis de 
 
 El presente proyecto se enfoca en el desarrollo de la etapa de segmentaci\'on de jugadores.
 
+\subsection {Pseudoc\'odigo}
+\begin{verbatim}
+funcion procVideo(dirVideo)
+	infoVideo = obtInfo(dirVideo);
+	for (i = 1; i < infoVideo.cantFrames; i++)
+		frameHSV = obtFrameHSV(dirVideo, i);
+		mascCancha = obtenerCancha(frameHSV);
+		mascJugadores = obtenerCandidatos(frameHSV);
+		mascFinal = mascCancha & mascJugadores;
+		guardarMasc(mascFinal, nombre);
+
+funcion obtFrameHSV (dirVideo, i)
+	frame = obtFrameVideo(dirVideo, i);
+	hsvFrame = convRGBHSV(frame);
+	return hsvFrame;
+
+funcion obtenerCancha(frameHSV)
+	mascVerde = (obtener Mascara de verde);
+	rellenar = rellenarAgujeros(mascVerde);
+	Ceros = elimPorcionesMenores(rellenar);
+	complemento = complementar(Ceros);
+	Unos = elimPorcionesMenores(complemento);
+	mascCancha = complementar(Unos);
+	return mascCancha;
+
+funcion obtenerCandidatos(frameHSV)
+	tamFrame = tamanno(frameHSV);
+	frameHSV = frameHSV.*255;
+	matrizVarianzas = ceros(tamFrame);
+	recorrerMatrizH:
+		ventana = slice(frameHSV);
+		matrizVarianzas(i, j) = calcVarianza(ventana);
+	frameHSV = frameHSV.^(0.5) 
+	frameHSV = frameHSV./255 
+	bordes = varianzaABin(frameHSV, calcUmbral(frameHSV));
+	mascJugadores = funcionRellenarAgujeros(bordes);
+	return mascJugador;
+\end{verbatim}
+
 \section{Dise\~no de la soluci\'on}
 
 El algoritmo implementado utiliza la informaci\'on conocida con anterioridad, basada en el hecho de que los jugadores siempre se encuentran rodeados de pixeles verdes (el campo de juego). Dado esto, el algoritmo se divide en dos etapas:
@@ -51,6 +90,7 @@ El algoritmo implementado utiliza la informaci\'on conocida con anterioridad, ba
 \begin{itemize}
 \item Detecci\'on del campo de juego o \emph{M\'ascara de cancha}
 \item Detecci\'on de los jugadores o \emph{M\'ascara de jugadores}
+\item Detecci\'on de m\'ascara final o \emph{M\'ascara Final}
 \end{itemize}
 
 Para obtener el \'area correspondiente a los jugadores, se realiza una operaci\'on AND entre las m\'ascaras.
@@ -67,7 +107,7 @@ Para obtener el campo de juego, se sigue el siguiente procedimiento:
 \item Eliminar la parte correspondiente al marcador del juego.
 \end{enumerate}
 
-\subsection{M\'ascara de los jugadores}
+\subsection{M\'ascara de regiones candidatas a jugadores}
 
 Para obtener los jugadores, lo que se hace es:
 
@@ -75,8 +115,20 @@ Para obtener los jugadores, lo que se hace es:
 \item Se convierte la imagen de entrada a una imagen de cromaticidad \emph{H}, tomando la capa de cromaticidad H.
 \item Se normaliza la imagen en un rango de 0 a 255.
 \item Se calcula la varianza local usando como entrada la imagen de cromaticidad \emph{H}
+\item Se calcula la desviaci\'on est\'andar \emph{H}
+\item Se desnormaliza la imagen \emph{H}
 \item Para calcular el umbral \'optimo para la imagen, se utiliz\'o la funcion \emph{graythresh} del lenguaje Octave, la cual por defecto usa el algoritmo de \emph{Otsu}.
+\item  Se rellenan las regiones candidatas a jugadores\emph{H}
 \end{enumerate}
+
+\subsection{M\'ascara de los jugadores}
+
+Para obtener la máscara final lo que se hace es:
+\begin{enumerate}
+\item  Se toman las mascaras de cancha y regiones candidatas a jugadores como operadores de "and" \emph{H}
+\item  Se almacena el resultado \emph{H}
+\end{enumerate}
+
 
 \section{Pruebas}
 
