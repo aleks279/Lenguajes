@@ -1,0 +1,306 @@
+\documentclass{IEEEtran}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\lstset
+{
+    language=Pascal,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
+
+\graphicspath{ {images/} }
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Tarea 2 - Pascal}
+\rfoot{P\'agina \thepage}
+
+\begin{document}
+\begin{titlepage}
+  \centering
+  {\scshape\LARGE Instituto Tecnol\'ogico de Costa Rica \par}
+  \vspace{1cm}
+  {\scshape\Large Tarea 2 - Pascal\par}
+  \vspace{1.5cm}
+  {\Large\itshape Ariel Herrera\par}
+  {\Large\itshape Sa\'ul Zamora\par}
+  \vfill
+  profesor\par
+  M. Sc. Sa\'ul Calder\'on Ram\'irez \textsc{}
+
+  \vfill
+
+% Bottom of the page
+  {\large \today\par}
+\end{titlepage}
+
+\section{Datos hist\'oricos}
+El lenguaje de programaci\'on Pascal est\'a nombrado en honor al matem\'atico franc\'es Blaise Pascal y fue desarrollado por Niklaus Wirth. Antes de su trabajo en Pascal, Wirth desarroll\'o \emph{Euler} y \emph{ALGOL W} y luego trabaj\'o en lenguajes similares a pascal como \emph{Modula-2} y \emph{Oberon}.
+
+Pascal fue el lenguaje de alto nivel mayormente utilizado en el desarrollo de \emph{Apple Lisa} y tambi\'en durante los primeros a\~nos de \emph{Macintosh}.
+
+\section{Importancia y usos}
+Inicialmente, Pascal era muy utilizado para la ense\~nanza de la programaci\'on. Generaciones de estudiantes usaron Pascal como un lenguaje introductorio durante la universidad. Variantes de Pascal han sido utilizadas frecuentemente para todo desde proyectos de investigaci\'on orientados a juegos de PC y sistemas embebidos.
+
+Object Pascal es utilizado hoy en d\'ia para el desarrollo de aplicaciones Windows pero tambi\'en tiene la habilidad de compilar el mismo c\'odigo a Mac, iOS y Android. Otra versi\'on multiplataforma llamada \emph{Free Pascal}, junto con el IDE \emph{Lazarus}, es popular entre los usuarios Linux ya que ofrece el tipo de desarrollo de \emph{escribe el c\'odigo una vez y compilalo donde sea}.
+
+\section{Tipos de datos}
+Al igual que en otros lenguajes, un tipo en Pascal define un rango de valores que una variable es capaz de almacenar y tambi\'en define que operaciones pueden ser ejecutadas sobre dicha variable.
+\begin{itemize}
+\item \emph{integer}: n\'umeros enteros
+\item \emph{real}: n\'umeros de punto flotante
+\item \emph{boolean}: valores de falso o verdadero
+\item \emph{char}: un caracter de un set ordenado de caract\'eres
+\item \emph{string}: grupo o hilera de caract\'eres
+\item \emph{subrango de tipos}: se pueden contruir subrangos de cualquier tipo de dato ordinal
+\begin{lstlisting}
+var
+  x : 1..10;
+  y : 'a'..'z';
+\end{lstlisting}
+\item \emph{sets}: en contraste con otros lenguajes de tu tiempo, Pascal soporta tipos de datos set
+\begin{lstlisting}
+var
+  Set1 : set of 1..10;
+  Set2 : set of 'a'..'z';
+\end{lstlisting}
+\item \emph{declaraciones de tipos}: los tipos pueden ser definidos usando otros tipos por medio de declaraciones
+\begin{lstlisting}
+type
+  x = integer;
+  y = x;
+\end{lstlisting}
+O declaraciones m\'as complejas:
+\begin{lstlisting}
+type
+  a = array[1..10] of integer;
+  b = record
+        x : integer;
+        y : char
+      end;
+  c = file of a;
+\end{lstlisting}
+\item \emph{tipo archivo}: como se mostro en el c\'odigo anterior, en Pascal, los archivos son secuencias de componentes
+\item \emph{punteros}: Pascal soporta el uso de punteros
+\begin{lstlisting}
+type
+  pNode = ^Node;
+  Node  = record
+          a : integer;
+          b : char;
+          c : pNode  {extra semicolon not strictly required}
+          end;
+var
+  NodePtr : pNode;
+  IntPtr  : ^integer;
+\end{lstlisting}
+\end{itemize}
+\section{Expresiones}
+Las expresiones en Pascal se dan en asignaciones o pruebas. Las expresiones producen un valor de un cierto tipo. Son construidas con dos componentes: los operadores y los operandos. Usualemente los operadores son binarios; requieren dos operandos. Tambi\'en hay operadores unarios, que requieren un \'unico operando.
+\begin{table}[H]
+\centering
+\caption{Precedencia de operadores}
+\begin{tabular}{lll}
+Operador                                                                      & Precedencia & Categor\'ia             \\
+Not, @                                                                        & M\'as alta  & Operadores unarios      \\
+* / div mod and shl shr as \textless\textless \textgreater\textgreater        & Segunda     & M\'ultiples operadores  \\
++ - or xor                                                                    & Tercera     & Operadores de adici\'on \\
+= \textless\textgreater \textless \textgreater \textless= \textgreater= in is & M\'as baja  & Operadores relacionales
+\end{tabular}
+\end{table}
+\section{Almacenamiento}
+\subsection{Almacenamiento de pila}
+En los progrmas en Pascal, el almacenamiento de pila se ubica luego del almacenamiento est\'atico y crece hacia abajo, hacia el fondo del \'area de memoria en el que se encuentra ubicado. La ubicaci\'on de almacenamiento de pila es autom\'atica cada vez que se invoca un subprograma y la recuperaci\'on tambi\'en es autom\'atica cuando el subprograma termina.
+\subsection{Almacenamiento de mont\'iculo}
+En Pascal, el manejo del mont\'iculo o \emph{heap} es hecho expl\'icitamente por el programa, este se asignado cuando es necesario y deasignado para recuperaci\'on durante la ejecuci\'on del programa.
+\section{Estructuras de control}
+Pascal es un lenguaje estructurado, lo que significa que el control de flujo est\'a estructurado en estatutos est\'andares, usualmente sin el comando \emph{goto}.
+\begin{lstlisting}
+while a <> b do  WriteLn('Waiting');
+
+if a > b then WriteLn('Condition met')   {no semicolon allowed!}
+           else WriteLn('Condition not met');
+
+for i := 1 to 10 do  {no semicolon for single statements allowed!}
+  WriteLn('Iteration: ', i);
+
+repeat
+  a := a + 1
+until a = 10;
+
+case i of
+  0 : Write('zero');
+  1 : Write('one');
+  2 : Write('two');
+  3,4,5,6,7,8,9,10: Write('?')
+end;
+\end{lstlisting}
+\section{Caracter\'isticas principales}
+Pascal es un lenguaje de programaci\'on estructurado fuertemente tipado, lo cual impleca que:
+\begin{itemize}
+\item El c\'odigo est\'a dividido en funciones o procedimientos, de esta forma, se facilita el uso de la programaci\'on estructurada en oposici\'on al antiguo modo de programaci\'on monol\'itica.
+\item El tipo de dato de todas las variables debe ser declarado previamente para que su uso sea posible.
+\end{itemize}
+\section{Caracter\'isticas distintivas}
+\begin{itemize}
+\item En Pascal, el tipo de una variable se fija en su definici\'on, la asignaci\'on de variables de valores de tipo incompatible no est\'a autorizada. Esto previene errores com\'unes donde variables son usadas incorrectamente porque el tipo es desconocido; y tambi\'en evita la necesidad de la \emph{notaci\'on h\'ungara}, en la que se ponen prefijos a los nombre de las variables para indicar su tipo.
+\end{itemize}
+\section{Ventajas y desventajas}
+\subsection{Ventajas}
+\begin{itemize}
+\item Pascal no permite asignaciones dentro de las expresiones y utiliza sint\'axis distintas para asignaciones y comparaciones evitando de esta manera muchos bugs.
+\item El tipo de la variable est\'a fijado en su definici\'on.
+\item El programa tiene dos partes definidas: la declarativa y la ejecutiva.
+\item Facilidad de uso.
+\end{itemize}
+\subsection{Desventajas}
+\begin{itemize}
+\item Durante los a\~nos 80 y principio de los 90, Pascal fu\'e criticado por no producir c\'odigo industrial.
+\item En la actualidad, es pr\'acticamente obsoleto en comparaci\'on con otros lenguajes m\'as modernos y poderosos.
+\end{itemize}
+\section{Ejemplo}
+Ejemplos de programas en Pascal:
+\begin{itemize}
+\item Hola mundo
+\begin{lstlisting}
+PROGRAM HolaMundo (OUTPUT);
+BEGIN
+  WriteLn('¡Hola Mundo!')
+  { como la siguiente instrucción no es ejecutable "end." 
+  no se requiere ; aunque puede ponerse según las
+  preferencias del programador }
+END.
+\end{lstlisting}
+\item Suma
+\begin{lstlisting}
+PROGRAM Suma (INPUT, OUTPUT);
+
+VAR
+  Sumando1, Sumando2,Suma:INTEGER;                                                              
+
+BEGIN
+  Writeln('ingrese un numero: ');
+  ReadLn(Sumando1);
+  Writeln('ingrese otro numero: ');
+  ReadLn(Sumando2);
+  Suma:=Sumando1 + Sumando2;
+  WriteLn ('La suma es: ',Suma);
+  Write ('Pulse [Intro] para finalizar...');
+  readkey
+END.
+\end{lstlisting}
+\item Ra\'iz cuadrada
+\begin{lstlisting}
+PROGRAM Raiz (INPUT, OUTPUT);
+(* Obtener la raíz cuadrada de un número real x cualquiera.*)
+
+VAR 
+  Valor, Resultado: REAL;
+BEGIN
+  WriteLn ('** Calcular la raíz cuadrada **');
+  Write ('Introduzca el valor: '); ReadLn (Valor);
+(* Raíz cuadrada del valor absoluto de x para evitar raíces imaginarias *)
+  Resultado := sqrt (abs (Valor));
+  Write ('La raíz cuadrada de ', Valor, ' es ');
+  IF Valor < 0 THEN (* Si es negativo, el resultado es imaginario *)
+    WriteLn (Resultado ,'i')
+  ELSE
+    WriteLn (Resultado);
+  Write ('Pulse [Intro] para finalizar...');
+END.
+\end{lstlisting}
+\item Bucles
+\begin{lstlisting}
+PROGRAM MultiplosDe3 (INPUT, OUTPUT);
+
+VAR
+  Numero, Cnt: INTEGER;
+
+BEGIN
+  Cnt := 0;
+  Write  ('Entra el primer número de la serie: '); ReadLn (Numero);
+  WHILE Numero <> 0 DO
+  BEGIN
+    IF (Numero MOD 3) = 0 THEN
+      INC (Cnt);
+    Write ('Dame otro numero (0 para terminar): '); ReadLn (Numero);
+  END;
+  WriteLn ('La cantidad de múltiplos de 3 ingresados es ', Cnt);
+  Write ('Pulse [Intro] para finalizar...');
+END.
+\end{lstlisting}
+\item Funciones y recursividad
+\begin{lstlisting}
+PROGRAM CalcularFactorial (INPUT, OUTPUT);
+
+(* Función que calcula el factorial de n (n!) de forma recursiva. *)
+  FUNCTION Factorial (CONST N: INTEGER): INTEGER;
+  BEGIN
+    IF N > 1 THEN
+      Factorial := N * (Factorial (N - 1))
+    ELSE
+      Factorial := N;
+  END;
+
+VAR
+  Base: INTEGER;
+BEGIN
+  Write ('Valor de N: '); ReadLn (Base);
+  WriteLn ('N! = ', Factorial (Base));
+  Write ('Pulse [Intro] para finalizar...');
+END.
+\end{lstlisting}
+\item Vectores
+\begin{lstlisting}
+PROGRAM NotasDeAlumnos;
+uses crt;
+Type
+vecalumnos = array [1..40] of string;
+var
+Nombre, Apellido: vecalumnos;
+Nota: array [1..40] of real;
+Begin
+clrscr; /*Limpia pantalla*/
+For i:= 1 to 40 do
+  begin
+   write(´Ingrese Nombre: ´);
+   readln(Nombre[i]);
+   write(´Ingrese Apellido: ´);
+   readln(Apellido[i]);
+   write(´Ingrese Nota: ´);
+   readln(Nota[i]);
+  end;
+For i:= 1 to 40 do
+  begin
+  write(Nombre[i], ´ ´,Apellido[i]);
+  if (Nota[i] >=7) then
+  writeln(´ aprobó´)
+  else
+  writeln(´ no aprobó´);
+  end;
+writeln(´´);
+Write ('Pulse [Intro] para finalizar...');
+Readln;
+end.
+\end{lstlisting}
+\end{itemize}
+
+\section{Referencias}
+
+\begin{thebibliography}{99}
+
+\bibitem{wiki} Pascal (programming language) (2016). . In \emph{Wikipedia}. Retrieved from \texttt{https://en.wikipedia.org/wiki/Pascal\_(programming\_language)}
+
+\bibitem{wiki2} Pascal (lenguaje de programación) (2011). . In Wikipedia. Retrieved from \texttt{https://es.wikipedia.org/wiki/Pascal\_(lenguaje\_de\_programación)}
+
+\bibitem{expressions} 12 expressions. (2015, November 14). Retrieved August 25, 2016, from \texttt{http://www.freepascal.org/docs-html/ref/refch12.html}
+
+\bibitem{storage} Storage management. Retrieved August 25, 2016, from \texttt{https://people.cs.clemson.edu/\~turner/courses/cs428/summer98/section1/webct/content/pz/ch5/ch5\_4.html}
+
+\end{thebibliography}
+
+\end{document}
