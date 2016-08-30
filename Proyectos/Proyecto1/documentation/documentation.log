@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.30)  17 AUG 2016 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.30)  19 AUG 2016 17:40
 entering extended mode
 **./documentation.tex
 (documentation.tex
@@ -154,36 +154,61 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \f@ncyO@olf=\skip51
 \f@ncyO@orf=\skip52
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count95
+\lst@gtempboxa=\box28
+\lst@token=\toks16
+\lst@length=\count96
+\lst@currlwidth=\dimen128
+\lst@column=\count97
+\lst@pos=\count98
+\lst@lostspace=\dimen129
+\lst@width=\dimen130
+\lst@newlines=\count99
+\lst@lineno=\count100
+\lst@maxwidth=\dimen131
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count101
+\lst@skipnumbers=\count102
+\lst@framebox=\box29
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (documentation.aux)
 \openout1 = `documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 -- Lines per column: 58 (exact).
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count95
-\scratchdimen=\dimen128
-\scratchbox=\box28
-\nofMPsegments=\count96
-\nofMParguments=\count97
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count98
-\MPscratchDim=\dimen129
-\MPnumerator=\count99
-\makeMPintoPDFobject=\count100
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count103
+\scratchdimen=\dimen132
+\scratchbox=\box30
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen133
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks18
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -229,110 +254,132 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+\c@lstlisting=\count109
+
 [0
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 52.
+(Font)              <7> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 52.
+(Font)              <5> on input line 53.
 
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(Pseudo.txt
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 3.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <5> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 3.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 26.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <5> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+)
 <images/frameCancha.png, id=7, 642.4pt x 361.35pt>
 File: images/frameCancha.png Graphic file (type png)
 
 <use images/frameCancha.png>
-Package pdftex.def Info: images/frameCancha.png used on input line 86.
+Package pdftex.def Info: images/frameCancha.png used on input line 91.
 (pdftex.def)             Requested size: 206.39685pt x 116.09752pt.
 
 <images/frameCancha90.png, id=8, 642.4pt x 361.35pt>
 File: images/frameCancha90.png Graphic file (type png)
 
 <use images/frameCancha90.png>
-Package pdftex.def Info: images/frameCancha90.png used on input line 92.
+Package pdftex.def Info: images/frameCancha90.png used on input line 97.
 (pdftex.def)             Requested size: 206.39685pt x 116.09752pt.
 
 <images/frameVarianza.png, id=9, 642.4pt x 361.35pt>
 File: images/frameVarianza.png Graphic file (type png)
 
 <use images/frameVarianza.png>
-Package pdftex.def Info: images/frameVarianza.png used on input line 98.
+Package pdftex.def Info: images/frameVarianza.png used on input line 103.
 (pdftex.def)             Requested size: 206.39685pt x 116.09752pt.
 
 <images/frameVarianza90.png, id=10, 642.4pt x 361.35pt>
 File: images/frameVarianza90.png Graphic file (type png)
 
 <use images/frameVarianza90.png>
-Package pdftex.def Info: images/frameVarianza90.png used on input line 104.
+Package pdftex.def Info: images/frameVarianza90.png used on input line 109.
 (pdftex.def)             Requested size: 206.39685pt x 116.09752pt.
 
 <images/frameFinal.png, id=11, 642.4pt x 361.35pt>
 File: images/frameFinal.png Graphic file (type png)
  <use images/frameFinal.png>
-Package pdftex.def Info: images/frameFinal.png used on input line 110.
+Package pdftex.def Info: images/frameFinal.png used on input line 115.
 (pdftex.def)             Requested size: 206.39685pt x 116.09752pt.
 
 <images/frameFinal90.png, id=12, 642.4pt x 361.35pt>
 File: images/frameFinal90.png Graphic file (type png)
 
 <use images/frameFinal90.png>
-Package pdftex.def Info: images/frameFinal90.png used on input line 116.
+Package pdftex.def Info: images/frameFinal90.png used on input line 121.
 (pdftex.def)             Requested size: 206.39685pt x 116.09752pt.
  [1
 
- <./images/frameCancha.png (PNG copy)> <./images/frameCancha90.png (PNG copy)> 
-<./images/frameVarianza.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 134.
+ <./images/frameCancha.png (PNG copy)> <./images/frameCancha90.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 139.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 []\OT1/ptm/m/n/8 Community, T. O.-F. (2009, June 7). \OT1/ptm/m/it/8 Doc-u-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 \OT1/ptm/m/it/8 men-ta-tion\OT1/ptm/m/n/8 . Re-trieved Au-gust 17, 2016, from
  []
 
 
-Underfull \hbox (badness 3118) in paragraph at lines 135--136
+Underfull \hbox (badness 3118) in paragraph at lines 140--141
 []\OT1/ptm/m/n/8 W, J. (1996). \OT1/ptm/m/it/8 GNU oc-tave\OT1/ptm/m/n/8 . Re-t
 rieved Au-gust 17, 2016, from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 []\OT1/ptm/m/it/8 Octave - pref-ace\OT1/ptm/m/n/8 . Re-trieved Au-gust 17, 2016
 , from
  []
 
 
-Overfull \hbox (25.5281pt too wide) in paragraph at lines 136--137
+Overfull \hbox (25.5281pt too wide) in paragraph at lines 141--142
 \OT1/pcr/m/n/8 http://www.math.utah.edu/docs/info/octave_1.html#SEC27 
  []
 
-[2 <./images/frameVarianza90.png (PNG copy)> <./images/frameFinal.png (PNG copy
-)> <./images/frameFinal90.png (PNG copy)>] (documentation.aux) ) 
+[2 <./images/frameVarianza.png (PNG copy)> <./images/frameVarianza90.png (PNG c
+opy)> <./images/frameFinal.png (PNG copy)> <./images/frameFinal90.png (PNG copy
+)>] (documentation.aux) ) 
 Here is how much of TeX's memory you used:
- 2505 strings out of 493335
- 40727 string characters out of 3136683
- 108197 words of memory out of 3000000
- 6025 multiletter control sequences out of 15000+200000
- 39172 words of font info for 71 fonts, out of 3000000 for 9000
+ 4395 strings out of 493335
+ 66711 string characters out of 3136683
+ 184770 words of memory out of 3000000
+ 7887 multiletter control sequences out of 15000+200000
+ 41357 words of font info for 73 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,10n,43p,419b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on documentation.pdf (3 pages, 509133 bytes).
+ 40i,10n,43p,419b,1741s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fon
+tname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on documentation.pdf (3 pages, 534981 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
+ 47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,35 @@
+funcion procVideo(dirVideo)
+	infoVideo = obtInfo(dirVideo);
+	for (i = 1; i < infoVideo.cantFrames; i++)
+		frameHSV = obtFrameHSV(dirVideo, i);
+		mascCancha = obtenerCancha(frameHSV);
+		mascJugadores = obtenerCandidatos(frameHSV);
+		mascFinal = mascCancha & mascJugadores;
+		guardarMasc(mascFinal, nombre);
+
+funcion obtFrameHSV (dirVideo, i)
+	frame = obtFrameVideo(dirVideo, i);
+	hsvFrame = convRGBHSV(frame);
+	return hsvFrame;
+
+funcion obtenerCancha(frameHSV)
+	mascVerde = (obtener Mascara de verde);
+	rellenar = rellenarAgujeros(mascVerde);
+	Ceros = elimPorcionesMenores(rellenar);
+	complemento = complementar(Ceros);
+	Unos = elimPorcionesMenores(complemento);
+	mascCancha = complementar(Unos);
+	return mascCancha;
+
+funcion obtenerCandidatos(frameHSV)
+	tamFrame = tamanno(frameHSV);
+	frameHSV = frameHSV.*255;
+	matrizVarianzas = ceros(tamFrame);
+	recorrerMatrizH:
+		ventana = slice(frameHSV);
+		matrizVarianzas(i, j) = calcVarianza(ventana);
+	frameHSV = frameHSV.^(0.5) 
+	frameHSV = frameHSV./255 
+	bordes = varianzaABin(frameHSV, calcUmbral(frameHSV));
+	mascJugadores = funcionRellenarAgujeros(bordes);
+	return mascJugador;
