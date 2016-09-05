@@ -1,0 +1,50 @@
+\documentclass{IEEEtran}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+
+\graphicspath{ {images/} }
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Segundo Proyecto Programado}
+\rfoot{P\'agina \thepage}
+
+\begin{document}
+\begin{titlepage}
+  \centering
+  {\scshape\LARGE Instituto Tecnol\'ogico de Costa Rica \par}
+  \vspace{1cm}
+  {\scshape\Large Segundo proyecto programado\par}
+  \vspace{1.5cm}
+  {\Large\itshape Ariel Herrera\par}
+  {\Large\itshape Sa\'ul Zamora\par}
+  \vfill
+  profesor\par
+  M. Sc. Sa\'ul Calder\'on Ram\'irez \textsc{}
+
+  \vfill
+
+% Bottom of the page
+  {\large \today\par}
+\end{titlepage}
+
+\section{Introducci\'on}
+En la actualidad, los sistemas de almacenamiento y comunicaci\'on digitales requieren de m\'etodos optimizados para el uso de recursos (energ\'eticos, temporales, de estacio, etc). Para satisfacer tal necesidad de manera efectiva, muchas disciplinas han formulado m\'utiples algoritmis para comprimir y descomprimir la informaci\'on. La compresi\'on de datos consiste en aplicar alg\'un m\'etodo que permita reducir el tama\~no original de la informaci\'on. Los algoritmos de compresi\'on sin p\'erdida son capaces de aplicar una serie de pasos para construir la informaci\'on comprimida, para luego, cuando la informaci\'on original necesite ser accesada, se descomprime y recupera la informaci\'on original complemtamente id\'entica. Los algoritmos de compresi\'on con p\'erdida en cambio, al implementar la descompresi\'on de la informaci\'on, no lo gran recuperar el 100\% de los datos originales. El algoritmo de Huffman implementado en este proyecto fue propuesto por David A. Huffman en 1952 enfocado en la compresi\'on sin p\'erdida de datos.
+
+\section{An\'alisis del problema}
+La t\'ecnica de Huffman trabaja al crear un \'arbol binario de nodos, los cuales pueden ser hojas o nodos internos. Al principio, todos empiezan como hojas, las cuales contienen un s\'imbolo, el peso (\emph{frecuencia}) es opcional, y un enlace al nodo padre, lo cual facilita leer el c\'odigo comenzando de las hojas. Los nodos internos contienen el peso del s\'imbolo, dos enlaces a nodos hijos y un enlace opcional a un nodo padre.
+
+Como una convenci\'on, el bit \emph{0} representa el siguiente hijo izquierdo y el bit \emph{1} el siguiente hijo derecho. Un \'arbol terminado puede crecer hasta tener ($n$) hojas y ($n - 1$) nodos internos. Un \'arbol de Huffman que omite los s\'imbolos que no se usan, produce el c\'odigo con el largo \'optimo.
+
+El proceso inicia con las hojas conteniendolos s\'imbolos a representar, luego un nuevo nodo es creado con los nodos con menor probalilidad como hijos, tal que la probabilidad de dicho nodo es igual a la suma de las probabilidades de sus hijos. Con los nodos anteriores mezclados en uno (ya no son considerados), y considerando al nuevo nodo, el proceso se repite hasta que solo quede un nodo: el \'arbol de Huffman.
+\section{Dise\~no de la soluci\'on}
+
+\section{Pruebas}
+
+\section{Referencias}
+
+\begin{thebibliography}{99}
+
+\bibitem{huffman} Mamta  Sharma.   Compression  using  Huffman  coding. \emph{IJCSNS International Journal of Computer Science andNetwork Security}, 10(5):133–141, 2010.
+\end{thebibliography}
+\end{document}
