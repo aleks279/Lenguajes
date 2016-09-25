@@ -1,0 +1,190 @@
+\documentclass{beamer}
+
+\mode<presentation> {
+\usetheme{Madrid}
+}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{listings}
+\lstset
+{
+    language=LISP,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
+
+%----------------------------------------------------------------------------------------
+% TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[LISP]{El lenguajge LISP}
+
+\author{Ariel Herrera \\ Sa\'ul Zamora}
+\institute[ITCR]
+{
+Instituto Tecnol\'ogico de Costa Rica \\ Escuela de Ingenier\'ia en Computaci\'on \\ Lenguajes de Programaci\'on
+\medskip
+}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{\'Indice}
+\tableofcontents
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+% PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Datos hist\'oricos}
+\section{Importancia y usos}
+\section{Tipos de datos}
+\section{Expresiones}
+\section{Estructuras de control}
+\section{Caracter\'isticas}
+\section{Ventajas y desventajas}
+\section{Demo}
+
+\begin{frame}
+\frametitle{Datos hist\'oricos}
+\begin{itemize}
+  \item Dise\~nado en 1958 por John McCarthy.
+  \item Segundo lenguaje de alto nivel de la historia.
+  \item LISt Processor.
+  \item Creado como lenguaje de notaci\'on matem\'atica para programas de computac\'on.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Importancia y usos}
+\begin{itemize}
+  \item Da origen a dialectos como \emph{Scheme}, ampliamente usados en la educaci\'on.
+  \item Ampliamente utilizado en la investigaci\'on de la inteligencia artificial.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Tipos de datos}
+En LISP, las variables no son tipadas, pero los objetos s\'i.
+Los tipos de datos en LISP pueden ser categorizados como:
+\begin{itemize}
+  \item Escalares:
+  \begin{itemize}
+    \item tipos num\'ericos
+    \item caract\'eres
+    \item s\'imbolos
+  \end{itemize}
+  \item Estructuras de datos:
+  \begin{itemize}
+    \item listas
+    \item vectores
+    \item vectores de bits (\emph{bit-vectors})
+    \item strings
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Expresiones}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.5\textwidth} % Left column and width
+\begin{itemize}
+  \item Operadores aritm\'eticos:
+    \begin{itemize}
+      \item +, -, *, /, quotient, gcd (greater common divisor), lcm (least common multiple)
+    \end{itemize}
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+
+\begin{itemize}
+  \item Operadores l\'ogicos:
+  \begin{itemize}
+    \item and, nor, not, xor, or
+  \end{itemize}
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Estructuras de control}
+Originalmente, LISP tiene pocas estructuras de control:
+\begin{itemize}
+  \item cond
+\end{itemize}
+
+Dialectos como Scheme:
+\begin{itemize}
+  \item do
+  \item if
+  \item let
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Caracter\'isticas}
+Principales:
+\begin{itemize}
+  \item Extensivo uso de par\'entesis.
+  \item Influencia del c\'alculo lambda.
+  \item Todo son funciones.
+\end{itemize}
+
+Distintivas:
+\begin{itemize}
+  \item Introducci\'on del concepto de recolector de basura. 
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Pros \& Cons}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.5\textwidth} % Left column and width
+Ventajas:
+\begin{itemize}
+  \item Manejo nativo de listas.
+  \item Gran poder de expresividad.
+\end{itemize}
+
+\column{.5\textwidth} % Right column and width
+Desventajas:
+\begin{itemize}
+  \item Gran cantidad de par\'entesis.
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\Huge{\centerline{Demostraci\'on}}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{Gracias por su atenci\'on}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 

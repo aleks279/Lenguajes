@@ -1,0 +1,126 @@
+\documentclass{IEEEtran}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\lstset
+{
+    language=Lisp,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
+
+\graphicspath{ {images/} }
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Tarea 4 - LISP}
+\rfoot{P\'agina \thepage}
+
+\begin{document}
+\begin{titlepage}
+  \centering
+  {\scshape\LARGE Instituto Tecnol\'ogico de Costa Rica \par}
+  \vspace{1cm}
+  {\scshape\Large Tarea 4 - LISP\par}
+  \vspace{1.5cm}
+  {\Large\itshape Ariel Herrera\par}
+  {\Large\itshape Sa\'ul Zamora\par}
+  \vfill
+  profesor\par
+  M. Sc. Sa\'ul Calder\'on Ram\'irez \textsc{}
+
+  \vfill
+
+% Bottom of the page
+  {\large \today\par}
+\end{titlepage}
+
+\section{Datos hist\'oricos}
+LISP es una familia de lenguajes de programaci\'on con una larga y distintiva historia de par\'entesis y notaci\'on prefija. Originalmente especificado en 1958, LISP es el segundo lenguaje de programaci\'on de alto nivel m\'as viejo, s\'olo superado en edad por FORTRAN, el cual es un a\~no m\'as antiguo. LISP ha cambiado mucho desde sus inicios y muchos dialectos existen hoy en dia; los m\'as conocidos son de prop\'osito general, llamados \emph{Common Lisp} y \emph{Scheme}.
+
+LISP fue originalmente creado como un lenguaje de notaci\'on matem\'atica para programas de computaci\'on, influenciado por la notaci\'on de c\'alculo lambda de Alonzo Church. R\'apidamente fue favorecido como lenguaje para la investigaci\'on de la Inteligencia Artificial. Al ser uno de los primeros lenfuajes de programaci\'on, LISP fue pionero en muchas \'areas de las ciencias de computaci\'on tales como \'arboles, manejo autom\'atico del almacenamiento, tipado din\'amico, condicionales, funciones de alto orden, recursividad y el compilador hecho con su mismo lenguaje.
+
+El nombre LISP nace de \emph{LISt Processor}, que significa \emph{procesador de listas}. Las listas enlazadas son uno de los mayores tipos de estructuras de datos de LISP y el c\'odigo fuente de LISP esta hecho de listas. Los programas pueden manipular el c\'odigo fuente como una estructura de datos, ayudando al programador a crear nuevas sint\'axis o lenguajes de dominio espec\'ifico embebidos en LISP.
+
+\section{Importancia y usos}
+LISP di\'o origen a dialectos como \emph{Scheme}, el cual es popularmente utilizado para prop\'ositos educaticos y en la investigaci\'on de la inteligencia artificial; el segundo se debe a la facilidad que tiene el c\'odigo de evaluarse y cambiarse a s\'i mismo.
+
+\section{Tipos de datos}
+En LISP, las variables no son tipadas, pero los objetos s\'i.
+Los tipos de datos en LISP pueden ser categorizados como:
+\begin{itemize}
+  \item Escalares:
+  \begin{itemize}
+    \item tipos num\'ericos
+    \item caract\'eres
+    \item s\'imbolos
+  \end{itemize}
+  \item Estructuras de datos:
+  \begin{itemize}
+    \item listas
+    \item vectores
+    \item vectores de bits (\emph{bit-vectors})
+    \item strings
+  \end{itemize}
+\end{itemize}
+
+\section{Expresiones}
+\subsection{Operadores aritm\'eticos}
++, -, *, /, quotient, gcd (greater common divisor), lcm (least common multiple)
+
+\subsection{Operadores l\'ogicos}
+and, nor, not, xor, or
+
+\section{Estructuras de control}
+LISP originalmente ten\'ia muy pocas estructuras de control, pero muchas m\'as fueron agregadas durante la evoluci\'on del lenguaje. Originalmente, el lenguaje solo contaba con el operador \emph{cond}, el cual ser\'ia el precursor de la actual estructura de \emph{if-then-else}.
+
+Los programadores de Scheme, usualmente expresan los ciclos usando recursividad de cola. M\'as recientemente fueron agregadas al lenguaje, estructuras de control con un estilo m\'as imperativo, como el \emph{do} de Scheme y la compleja expresi\'on de \emph{loop} de Common Lisp.
+
+Dada la herencia de procesamiento de listas de LISP, este tiene un largo arreglo de funciones de alto orden relacionadas a la iteracion sobre secuencias. Un ejemplo de esto es la funci\'on \emph{map} la cual aplica una funci\'on dada sucesivamente sobre una o m\'as listas, recolectando los resultados en una nueva lista.
+
+\section{Caracter\'isticas principales}
+Una de las principales caracte\'isticas de LISP es el extenso uso de los par\'entesis, dado esto, es nombre LISP
+logrado ser el acr\'onimo de \emph{Lots of Irritating Single Parenthesis}.
+
+\section{Caracter\'isticas distintivas}
+Una de las caracter\'isticas distintivas de LISP, es que los programas escritos en este lenguaje, pueden ser capaces de analizarce y reescribirse a s\'i mismos, lo cual convierte al lenguaje en el ideal para la investigaci\'on de la inteligencia artificial.
+
+El lenguaje LISP introdujo el concepto del recolector de basura
+
+\section{Ventajas y desventajas}
+\subsection{Ventajas}
+\begin{itemize}
+  \item Manejo de listas nativo.
+  \item Gran poder de expresividad.
+\end{itemize}
+\subsection{Desventajas}
+\begin{itemize}
+  \item La gran cantidad de par\'entesis puede ser abrumadora y dif\'icil de llevar cuenta.
+\end{itemize}
+\section{Ejemplo}
+\begin{lstlisting}
+(defun factorial (n)
+   (if (= n 0) 1
+       (* n (factorial (- n 1)))))
+
+(defun reverse (list)
+  (let ((return-value '()))
+    (dolist (e list) (push e return-value))
+    return-value))
+\end{lstlisting}
+
+\section{Referencias}
+
+\begin{thebibliography}{99}
+
+\bibitem{wiki} Lisp (programming language) (2016). . In \emph{Wikipedia}. Retrieved \texttt{from https://en.wikipedia.org/wiki/Lisp\_(programming\_language)}
+\bibitem{datos} LISP - data types. (2016). Retrieved September 25, 2016, from \texttt{https://www.tutorialspoint.com/lisp/lisp\_data\_types.htm}
+\bibitem{operatorsL} 6.4. Logical operators. Retrieved September 25, 2016, from \texttt{https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node75.html}
+\bibitem{operatorsA} 12.4. Arithmetic operations. Retrieved September 25, 2016, from \texttt{https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node125.html}
+
+\end{thebibliography}
+
+\end{document}

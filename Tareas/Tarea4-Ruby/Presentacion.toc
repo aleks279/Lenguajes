@@ -1,9 +1,0 @@
-\beamer@endinputifotherversion {3.36pt}
-\beamer@sectionintoc {1}{Datos hist\'oricos}{3}{0}{1}
-\beamer@sectionintoc {2}{Importancia y usos}{3}{0}{2}
-\beamer@sectionintoc {3}{Tipos de datos}{3}{0}{3}
-\beamer@sectionintoc {4}{Expresiones}{3}{0}{4}
-\beamer@sectionintoc {5}{Estructuras de control}{3}{0}{5}
-\beamer@sectionintoc {6}{Caracter\'isticas}{3}{0}{6}
-\beamer@sectionintoc {7}{Ventajas y desventajas}{3}{0}{7}
-\beamer@sectionintoc {8}{Demo}{3}{0}{8}
