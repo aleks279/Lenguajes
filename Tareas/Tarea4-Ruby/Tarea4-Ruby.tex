@@ -1,0 +1,190 @@
+\documentclass{IEEEtran}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\lstset
+{
+    language=Ruby,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
+
+\graphicspath{ {images/} }
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Tarea 4 - Ruby}
+\rfoot{P\'agina \thepage}
+
+\begin{document}
+\begin{titlepage}
+  \centering
+  {\scshape\LARGE Instituto Tecnol\'ogico de Costa Rica \par}
+  \vspace{1cm}
+  {\scshape\Large Tarea 4 - Ruby\par}
+  \vspace{1.5cm}
+  {\Large\itshape Ariel Herrera\par}
+  {\Large\itshape Sa\'ul Zamora\par}
+  \vfill
+  profesor\par
+  M. Sc. Sa\'ul Calder\'on Ram\'irez \textsc{}
+
+  \vfill
+
+% Bottom of the page
+  {\large \today\par}
+\end{titlepage}
+
+\section{Datos hist\'oricos}
+Ruby es un lenguaje de prop\'osito general, din\'amico, reflectivo y orientado a objetos. Fu\'e dise\~nado y desarrollado a mediados de los a\~nos 90 por Yukihiro "Matz" Matsumoto en Jap\'on.
+
+De acuerdo son si creador, Ruby fue influenciado por Perl, Smalltalk, Eiffel, Ada y LISP. Soporta la programaci\'on en m\'ultiples paradigmas incluyendo funcional, orientaci\'on a objetos e imperativo. Tambi\'en tiene un sistema de tipos din\'amicos y un manejo de memoria autom\'atico.
+
+\section{Importancia y usos}
+Ruby es un lenguaje f\'acil de aprender, con fuertes abstracciones de los detalles computacioneles; dado esto es un buen lenguaje a considerar para comenzar a aprender a programar.
+
+Ruby tambi\'en es la entrada a Ruby On Rails. RoR es el framework con mucha popularidad que usa y depende de Ruby, dicho framework es ampliamente utilizado en la creaci\'on de aplicaciones web.
+
+\section{Tipos de datos}
+Ruby posee un tipado de datos din\'amico, sin embargo posee los siguientes tipos de datos nativos:
+\begin{itemize}
+  \item String
+  \item Fixnum
+  \item Integer
+  \item Numeric
+  \item Float
+  \item NilClass
+  \item Hash
+  \item Symbol
+  \item Array
+  \item Range
+\end{itemize}
+
+\section{Expresiones}
+\subsection{Operadores aritm\'eticos}
++, -, *, /, \%, ** (potencia)
+
+\subsection{Operaciones de comparaci\'on}
+==, !=, >, <, >=, <=, <=>, ===, .eql?, equal?
+
+\subsection{Operadores de asignaci\'on}
+=, +=, -=, *=, /=, \%=, **=
+
+\subsection{Operadores l\'ogicos}
+and, or, \&\&, !, not
+
+\section{Estructuras de control}
+Estatuto IF:
+\begin{lstlisting}
+# Generate a random number and print whether it's even or odd.
+if rand(100) % 2 == 0
+  puts "It's even"
+else
+  puts "It's odd"
+end
+\end{lstlisting}
+
+Bloques e iteradores:
+\begin{lstlisting}
+{ puts 'Hello, World!' } # note the braces
+# or:
+do
+  puts 'Hello, World!'
+end
+
+File.open('file.txt', 'w') do |file| # 'w' denotes "write mode"
+  file.puts 'Wrote some text.'
+end                                  # file is automatically closed here
+
+File.readlines('file.txt').each do |line|
+  puts line
+end
+# => Wrote some text.
+\end{lstlisting}
+
+\section{Caracter\'isticas principales}
+\begin{itemize}
+  \item Fuerte orientaci\'on a objetos con herencia, mixins y metaclases.
+  \item Tipado de datos din\'amico y \emph{duck typing} (si se ve como un pato y suena como un pato, es un pato).
+  \item Todo es una expresi\'on (hasta los estatutos) y todo se ejecuta imperativamente (hasta las declaraciones).
+  \item Reflexi\'on y alteraci\'on din\'amica de objetos para facilitar metaprogramaci\'on.
+  \item Sint\'axis \'unica de bloques para iteradores y generadores.
+  \item Notaci\'on literal para arreglos, hashes, expresiones regulares y s\'imbolos.
+  \item Interpolaci\'on de hileras.
+  \item Argumentos default.
+\end{itemize}
+
+\section{Caracter\'isticas distintivas}
+\begin{itemize}
+  \item Recolector de basura.
+  \item Cuatro niveles de alcance para variables: globales, de clase, de instancia y local.
+  \item Sobrecarga de operadores.
+  \item Soporte nativo para n\'umeros racionales, complejos y aritm\'etica de presici\'on arbitraria.
+  \item Soporte inicial para Unicode y m\'ultiples codificaciones de caract\'eres.
+  \item Consola Ruby interactiva.
+  \item Manejo centralizado de paquetes a trav\'ez de \emph{RugyGems}.
+  \item Implementaciones en todas las plataformas m\'as conocidas.
+\end{itemize}
+
+\section{Ventajas y desventajas}
+\subsection{Ventajas}
+\begin{itemize}
+  \item Herramientas: utilizado con el framework de Ruby On Rails, Ruby es bueno para entregar m\'as \emph{features} en menos tiempo. Provee de una estructura est\'andar para web apps, donde todos los patrones esnt\'andar son manejados por el usuario.
+  \item Librer\'ias: existen gemas (librer\'ias externas) para casi todo lo que se le pueda ocurrir al usuario.
+  \item Calidad de c\'odigo: generalmente, la calidad de c\'odigo Ruby es mejor que la de sus contrapartes en PHP o NodeJS.
+  \item Pruebas automatizadas: la comunidad Ruby soporta mucho las pruebas, y a\'un m\'as, las pruebas automatizadas. Lo cual ayuda a entregar software de buena calidad.
+  \item Gran comunidad: en casi todas las grandes ciudades del mundo hay una comunidad Ruby que dirige reuniones regulares. Ruby es uno de los lenguajes m\'as populares en Github.
+  \item Es popular en el valle: la historia a demostrado que las tecnolog\'ias que son populares en Silicon Valley son gradualmente aceptadas en todo el mundo. Muchas de las grandes startups de los a\~nos recientes como AirBnB, Etsy, Github y Shopify, est\'an construidas con Ruby.
+  \item Productividad: Ruby es un lenguaje elocuente, lo que combinado con la gran variedad de librer\'ias externas, habilita al programador al desarrollo r\'apido.
+\end{itemize}
+\subsection{Desventajas}
+\begin{itemize}
+  \item Velocidad de ejecuci\'on: el mayor argumento contra Ruby es que es lento. Sin embargo, estos problemas de velocidad no se notar\'an hasta que la aplicaci\'on tenga un gran volumen de tr\'afico.
+  \item Velocidad de arranque: aplicable en el caso del framework, Ruby on Rails, dependiendo del n\'umero de dependencias (\emph{gemas}), puede tomar una cantidad de tiempo significativa a una aplicaci\'on para arrancar, lo que resiente el tiempo de desarrollo.
+  \item Documentaci\'on: puede ser dif\'icil encontrar buena documentaci\'on, especialmente para las gemas y librer\'ias que hacen uso excesivo de mixins.
+  \item M\'ultiples hilos: Ruby on Rails soporta m\'ultiples hilos, aunque algunas de las librer\'ias de entrada y salida no. Esto significa que si no se es cuidadoso, los requests se apilaran detr\'as del request actual lo cual puede introducir problemas de performance.
+  \item ActiveRecord: es una librer\'ia fuertemente utilizada en Ruby on Rails. Y si bien est\'a bien dise\~nada, el m\'as grande problema es que el dominio se amarra muy fuerte a los mecanismos de persisstencia.
+\end{itemize}
+\section{Ejemplo}
+\subsection{Strings}
+\begin{lstlisting}
+a = "\nThis is a double-quoted string\n"
+a = %Q{\nThis is a double-quoted string\n}
+a = %{\nThis is a double-quoted string\n}
+a = %/\nThis is a double-quoted string\n/
+a = <<-BLOCK
+
+This is a double-quoted string
+BLOCK
+
+var = 3.14159 # interpolacion de variables
+"pi is #{var}"
+=> "pi is 3.14159"
+\end{lstlisting}
+
+\subsection{Colecciones}
+\begin{lstlisting}
+a = [1, 'hi', 3.14, 1, 2, [4, 5]]
+
+a[2]             # => 3.14
+a.[](2)          # => 3.14
+a.reverse        # => [[4, 5], 2, 1, 3.14, 'hi', 1]
+a.flatten.uniq   # => [1, 'hi', 3.14, 2, 4, 5]
+\end{lstlisting}
+
+\section{Referencias}
+
+\begin{thebibliography}{99}
+
+\bibitem{wiki} Ruby (programming language) (2016). . In \emph{Wikipedia}. Retrieved from \texttt{https://en.wikipedia.org/wiki/Ruby\_(programming\_language)}
+\bibitem{ruby} MacDonald, R., \& Founder. (2015, September 8). Pros and cons of Ruby on rails. Retrieved September 24, 2016, from \texttt{https://www.madetech.com/blog/pros-and-cons-of-ruby-on-rails}
+\bibitem{datos} Ruby programming/data types - Wikibooks, open books for an open world. Retrieved September 24, 2016, from \texttt{https://en.wikibooks.org/wiki/Ruby\_Programming/Data\_types}
+\bibitem{operadores} Ruby Operators. (2016). Retrieved September 24, 2016, from \texttt{https://www.tutorialspoint.com/ruby/ruby\_operators.htm}
+\bibitem{importance} Retrieved September 25, 2016, from http://www.skilledup.com/articles/4-reasons-learn-ruby-first-programming-language
+
+\end{thebibliography}
+
+\end{document}
