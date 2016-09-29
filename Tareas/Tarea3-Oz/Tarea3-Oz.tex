@@ -1,0 +1,132 @@
+\documentclass{IEEEtran}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\lstset
+{
+    language=Oz,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
+
+\graphicspath{ {images/} }
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Tarea 3 - Oz (Mozart)}
+\rfoot{P\'agina \thepage}
+
+\begin{document}
+\begin{titlepage}
+  \centering
+  {\scshape\LARGE Instituto Tecnol\'ogico de Costa Rica \par}
+  \vspace{1cm}
+  {\scshape\Large Tarea 3 - Oz (Mozart)\par}
+  \vspace{1.5cm}
+  {\Large\itshape Ariel Herrera\par}
+  {\Large\itshape Sa\'ul Zamora\par}
+  \vfill
+  profesor\par
+  M. Sc. Sa\'ul Calder\'on Ram\'irez \textsc{}
+
+  \vfill
+
+% Bottom of the page
+  {\large \today\par}
+\end{titlepage}
+
+\section{Datos hist\'oricos}
+Oz es un lenguaje multiparadigma desarrollado en el Laboratorio de Sistemas de Programaci\'on de la Universidad Cat\'olica de Louvain con prop\'ositos educativos.
+El lenguaje fue inicialmente dise\~nado por Gert Smolka y sus estudiantes en 1991. Para 1996 el desarrollo de Oz continuaba en cooperaci\'on con el grupo de investigaci\'on de Seif Haridi y Peter Van Roy en el Instituto Sueco de Ciencias de la Computaci\'on. Desde 1999, Oz ha sido continuamente desarrollado por el grupo internacional conocido como \emph{el Consorcio Mozart}, el cual consis\'ia originalmente de la Universidad de Saarland, Universidad Cat\'olica de Louvain y el Instituto Sueco de Ciencias de la Computaci\'on. En 2005, la responsabilidad del desarrollo y mantenimiento de Oz se transfiri\'o a los miembros principales del grupo, \emph{la Junta de Mozart}, con el expreso prop\'osito de abrir el desarrollo de Mozart a una comunidad m\'as grande.
+El sistema de programaci\'on Mozart es la implementaci\'on principal de Oz. Ha sido publicado con una liscensia \emph{open source} por el Consorcio Mozart. Tambi\'en ha sido llevado a diferentes plataformas de Unix, FreeBSD, Linux, Windows y OS X.
+
+\section{Importancia y usos}
+Oz fue construido principalmente con prop\'ositos educativos ya que contiene la mayor\'ia de los paradigmas de programaci\'on incluyendo l\'ogico, funcional, imperativo, orientado a objetos, programaci\'on concurrente, restrictivo, distribuido, entre otros.
+
+
+
+\section{Tipos de datos}
+Oz es un lenguaje con muy pocos tipos de datos nativos:
+
+\begin{itemize}
+\item N\'umeros: punto flotante y enteros.
+\item Records: para agrupar data.
+\item Tuplas: records con caracter\'isticas enteras en orden ascendente.
+\item Listas: estructuras lineares simples.
+\end{itemize}
+
+\section{Expresiones}
+\begin{table}[H]
+\centering
+\caption{Operadores}
+\label{my-label}
+\begin{tabular}{ll}
+Operador                                               & Categor\'ia                                                           \\
+Nada                                                   & Nueva l\'inea                                                         \\
+/* ... */                                              & Comentarios                                                           \\
+\%                                                     & Comentarios                                                           \\
+\=, =\textless, \textless, \textgreater=, \textgreater & Comparaciones                                                         \\
+Pow                                                    & Potencia                                                              \\
+Log                                                    & Logaritmo                                                             \\
+mod                                                    & Divisi\'on modular                                                    \\
+Sqrt / Exp / Abs                                       & Ra\'iz cuadrada / Funci\'on exponencial \textbackslash Valor Absoluto \\
+Sin / Cos / Tan                                        & B\'asicas trigonom\'etricas                                           \\
+Asin / Acos / Atan                                     & Inversas trigonom\'etricas                                           
+\end{tabular}
+\end{table}
+
+\section{Estructuras de control}
+\begin{table}[H]
+\centering
+\caption{Estructuras de control}
+\label{my-label}
+\begin{tabular}{ll}
+Instrucci\'on                              & Uso                 \\
+try a catch exn then ... end               & Atrapar excepciones \\
+raise ... end                              & Arrojar excepciones \\
+if c then ... end                          & if\_then            \\
+if c then b1 elseif c2 then b2 else b3 end & if\_then\_else     
+\end{tabular}
+\end{table}
+\section{Caracter\'isticas principales}
+Oz tiene sem\'antica formal simple y una implementaci\'on eficiente. Tambi\'en es un lenguaje que facilita la concurrencia, similar a Erlang.
+
+\section{Caracter\'isticas distintivas}
+Adem\'as de la programaci\'on multiparadigma, las mayores fortalezas de Oz est\'an en la programaci\'on restrictiva y la programaci\'on distribuida. Debido a su dise\~no, Oz es capaz de implementar un modelo de programaci\'on de red transparente. Este modelo hace f\'acil programar aplicaciones abiertas y tolerantes de fallos con el lenguaje. Para la programaci\'on restrictiva, Oz introduce la idea de \emph{espacios de computaci\'on}, dentro de los cuales se permite la b\'usqueda definida por el usuario y la distribuci\'on de estrategias ortogonal al dominio de las restricciones.
+\section{Ventajas y desventajas}
+\subsection{Ventajas}
+\begin{itemize}
+\item Dada su capacidad para la programci\'on multiparadigma, resulta muy \'util para prop\'ositos educativos.
+\end{itemize}
+\subsection{Desventajas}
+\begin{itemize}
+\item La velocidad de ejecuci\'on de un programa producido por el compilador Mozart es muy lenta (alrededor de 50 veces m\'as lento que el GCC para C).
+
+\end{itemize}
+\section{Ejemplo}
+Implementaci\'in de la divisi\'on con el algoritmo trial:
+\begin{lstlisting}
+fun {Sieve Xs}
+   case Xs of nil then nil
+   [] X|Xr then Ys in
+      thread Ys = {Filter Xr fun {$ Y} Y mod X \= 0 end} end
+      X|{Sieve Ys}
+   end
+end
+\end{lstlisting}
+
+\section{Referencias}
+
+\begin{thebibliography}{99}
+
+\bibitem{wiki} Oz (programming language) (2016). . In \emph{Wikipedia}. Retrieved from  \texttt{https://en.wikipedia.org/wiki/Oz\_(programming\_language)}
+
+\bibitem{oz} Syntax in oz. Retrieved September 20, 2016, from \texttt{http://rigaux.org/language-study/syntax-across-languages-per-language/Oz.html}
+
+
+\end{thebibliography}
+
+\end{document}
