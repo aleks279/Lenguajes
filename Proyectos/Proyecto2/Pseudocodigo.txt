@@ -1,0 +1,18 @@
+comprimir_huffman(NombreArchivo) <-
+	leer_contenido_del_archivo(NombreArchivo, Lista_de_letras),
+	convertir_letras_a_palabras(Lista_de_letras, Lista_de_palabras),
+	convertir_palabras_en_nodos(Lista_de_palabras, Lista_de_nodos), %nodos incluyen cantidad de repeticiones, básicamente es el histograma
+	select_sort(Lista_de_nodos, Histograma), %Histograma ordenado de la menor cantidad de nodos a la mayor
+	crear_arbol_huffman(Histograma, Arbol_de_Huffman),
+	crear_diccionario(Arbol_de_Huffman, Diccionario_de_Huffman), %Diccionario de Huffman
+	escribir_diccionario(Diccionario_de_Huffman, NombreArchivo), %Almacena en txt
+	comprimir(Lista_de_palabras, Diccionario_de_Huffman, Lista_de_contenido_compreso), %Cambia datos en lista de palabras por su respectivo codigo de compresion
+	escribir_compresion(CompressedList, NombreArchivo). %Almacena el contenido compreso en el archivo especificado para comprimir
+
+descomprimir_huffman(NombreArchivo) <- 
+	cargar_diccionario(Nombre_Archivo, Diccionario_de_HuffmanStr),
+	preparar_diccionario(Diccionario_de_HuffmanStr, diccionario),
+	leer_contenido_del_archivo(NombreArchivo, Lista_de_codigos),
+	descomprimir(Lista_de_codigos, Diccionario_Huffman, UncompressedList),
+	escribir_descompresion(UncompressedList, NombreArchivo). %Almacena el contenido compreso en el archivo especificado para comprimir	
+	
